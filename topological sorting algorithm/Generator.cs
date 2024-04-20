@@ -61,15 +61,14 @@ class TopologyDFS
             Console.WriteLine();
         }
 
-        /*for (var i = 0; i < vertices; i++)
+        for (var i = 0; i < vertices; i++)
         {
             foreach (var variable in matrix[i])
             {
                 Console.Write(variable + " ");
             }
             Console.WriteLine();
-        }*/
-
+        }
 
         return matrix;
     }
