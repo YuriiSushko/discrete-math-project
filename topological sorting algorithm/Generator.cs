@@ -2,7 +2,7 @@ namespace topological_sorting_algorithm;
 
 class TopologyDFS
 {
-    public Vertex[,] GenerationGraphs(int numVertices, double density)
+   public Vertex[,] GenerationGraphs(int numVertices, double density)
     {
         var random = new Random();
         var graph = new Vertex[numVertices, numVertices];
@@ -34,11 +34,27 @@ class TopologyDFS
         }
 
         Console.WriteLine("Adjacency matrix:");
+        Console.Write("  ");
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        
+        for (char c = 'a'; c < 'a' + numVertices; c++)
+        {
+            Console.Write($"{c} ");
+        }
+        
+        Console.ResetColor();
+        Console.WriteLine();
+        
         for (var i = 0; i < numVertices; i++)
         {
+            
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write($"{(char)('a' + i)} ");
+            Console.ResetColor();
+            
             for (var j = 0; j < numVertices; j++)
             {
-                if (graph[i,j].Value == 1)
+                if (graph[i, j].Value == 1)
                 {
                     Console.ForegroundColor = ConsoleColor.Blue;
                 }
@@ -46,7 +62,7 @@ class TopologyDFS
                 {
                     Console.ResetColor();
                 }
-                
+
                 Console.Write(graph[i, j].Value + " ");
             }
             Console.ResetColor();
@@ -57,23 +73,25 @@ class TopologyDFS
         return graph;
     }
 
-    public Dictionary<char, List<int>>[] SpyskySumizh(Vertex[,] graph, int vertices)
+    public Dictionary<char, List<char>>[] SpyskySumizh(Vertex[,] graph, int vertices)
     {
-        var adjacencyLists = new Dictionary<char, List<int>>[vertices];
-       
+        var adjacencyLists = new Dictionary<char, List<char>>[vertices];
+
         for (var i = 0; i < vertices; i++)
         {
-            adjacencyLists[i] = new Dictionary<char, List<int>>();
+            adjacencyLists[i] = new Dictionary<char, List<char>>();
             for (var j = 0; j < vertices; j++)
             {
-                if (graph[i,j].Value != 0)
+                if (graph[i, j].Value != 0)
                 {
+                    var columnLabel = (char)('a' + j);
+                    
                     if (!adjacencyLists[i].ContainsKey(graph[i, j].Name))
                     {
-                        adjacencyLists[i][graph[i, j].Name] = new List<int>();
+                        adjacencyLists[i][graph[i, j].Name] = new List<char>();
                     }
                 
-                    adjacencyLists[i][graph[i, j].Name].Add(1);
+                    adjacencyLists[i][graph[i, j].Name].Add(columnLabel);
                 }
             }
         }
@@ -86,7 +104,9 @@ class TopologyDFS
             {
                 foreach (var value in kvp.Value)
                 {
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     Console.Write(value + " ");
+                    Console.ResetColor();
                 }
                 Console.WriteLine();
             }
