@@ -38,8 +38,18 @@ class TopologyDFS
         {
             for (var j = 0; j < numVertices; j++)
             {
+                if (graph[i,j].Value == 1)
+                {
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                }
+                else
+                {
+                    Console.ResetColor();
+                }
+                
                 Console.Write(graph[i, j].Value + " ");
             }
+            Console.ResetColor();
             Console.WriteLine();
         }
         Console.WriteLine();
