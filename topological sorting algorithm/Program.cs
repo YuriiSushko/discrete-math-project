@@ -9,6 +9,6 @@ static class Program
         const double density = 0.4;
 
         var adjacencyMatrix = obj.GenerationGraphs(vertices, density);
-        var adjacencyLists = (adjacencyMatrix, vertices);
+        var adjacencyLists = obj.SpyskySumizh(adjacencyMatrix, vertices);
     }
 }

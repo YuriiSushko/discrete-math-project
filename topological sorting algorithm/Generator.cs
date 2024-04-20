@@ -21,9 +21,9 @@ class TopologyDFS
                 edgeCount++;
             }
         }
-
+        
+        Console.WriteLine("Adjacency matrix:");
         for (var i = 0; i < vertices; i++)
-
         {
             for (var j = 0; j < vertices; j++)
             {
@@ -31,7 +31,7 @@ class TopologyDFS
             }
             Console.WriteLine();
         }
-        
+        Console.WriteLine();
         return graph;
     }
 
@@ -51,7 +51,7 @@ class TopologyDFS
             }
         }
         
-
+        Console.WriteLine("Adjacency lists:");
         for (var i = 0; i < vertices; i++)
         {
             foreach (var variable in matrix[i])
@@ -60,16 +60,9 @@ class TopologyDFS
             }
             Console.WriteLine();
         }
-
-        for (var i = 0; i < vertices; i++)
-        {
-            foreach (var variable in matrix[i])
-            {
-                Console.Write(variable + " ");
-            }
-            Console.WriteLine();
-        }
-
+        Console.WriteLine();
+        
         return matrix;
     }
+    
 }
