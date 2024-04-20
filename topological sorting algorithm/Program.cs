@@ -1,10 +1,14 @@
 ﻿namespace topological_sorting_algorithm;
 
-class Program
+static class Program
 {
     static void Main()
     {
         var obj = new TopologyDFS();
-        obj.SpyskySumizh(obj.GenerationGraphs(15, 0.4), 15);
+        const int vertices = 15;
+        const double density = 0.4;
+
+        var adjacencyMatrix = obj.GenerationGraphs(vertices, density);
+        var adjacencyLists = (adjacencyMatrix, vertices);
     }
 }
