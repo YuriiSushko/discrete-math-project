@@ -34,26 +34,22 @@ class TopologyDFS
         return graph;
     }
 
-    public Dictionary<int, List<int>>[] AdjacencyListsGenerator(Vertex[,] graph, int vertices)
+    public List<List<int>> AdjacencyListsGenerator(Vertex[,] graph, int vertices)
     {
-        var adjacencyLists = new Dictionary<int, List<int>>[vertices];
+        var adjacencyLists = new List<List<int>>();
 
         for (var i = 0; i < vertices; i++)
         {
-            adjacencyLists[i] = new Dictionary<int, List<int>>();
+            adjacencyLists.Add(new List<int>());
             for (var j = 0; j < vertices; j++)
             {
                 if (graph[i, j].Value != 0)
                 {
-                    if (!adjacencyLists[i].ContainsKey(graph[i, j].IndexI))
-                    {
-                        adjacencyLists[i][graph[i, j].IndexI] = new List<int>();
-                    }
-                
-                    adjacencyLists[i][graph[i, j].IndexI].Add(j);
+                    adjacencyLists[i].Add(j);
                 }
             }
         }
         return adjacencyLists;
     }
+
 }

@@ -21,18 +21,16 @@ public class Printers
         for (int i = 0; i < vertices; i++)
         {
             Console.Write($"Adjacency list[{graph[i, 0].IndexI}]: ");
-            if (adjacencyLists[i].ContainsKey(graph[i, 0].IndexI))
+            foreach (var value in adjacencyLists[i])
             {
-                foreach (var value in adjacencyLists[i][graph[i, 0].IndexI])
-                {
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.Write(value + " ");
-                    Console.ResetColor();
-                }
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write(value + " ");
+                Console.ResetColor();
             }
             Console.WriteLine();
         }
     }
+
     
     public void ToPrintMatrix(Vertex[,] graph, int numVertices)
     {
