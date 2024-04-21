@@ -46,5 +46,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contributors
 
-- [Sushko Yurii](https://github.com/yurii_sushko) - [created both algorith and tested]
+- [Sushko Yurii](https://github.com/YuriiSushko) - [created both algorith and tested]
 - [Daria Korotych](https://github.com/Daria-Korotych) - [created random matrix generator and described the project]
