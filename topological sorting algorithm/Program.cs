@@ -11,7 +11,7 @@ static class Program
         var dfsLists = new DfsTopologicalSortingAlgorithmLists();
         var printers = new Printers();
         
-        const int numVertices = 20;
+        const int numVertices = 500;
         const double density = 0.5;
         const int numOfTests = 20;
 
@@ -53,10 +53,10 @@ static class Program
         var averagePerOneSetOfTestsMatrix = totalTimeMatrix / numOfTests;
         var averagePerOneSetOfTestsLists = totalTimeLists / numOfTests;
         
-        Console.WriteLine($"\nTotal time per {numOfTests} taken to sort graph with Matrix: {totalTimeMatrix}");
-        Console.WriteLine($"Average time per {numOfTests} tests taken to sort graph with Matrix: {averagePerOneSetOfTestsMatrix}\n");
-        Console.WriteLine($"Total time per {numOfTests} taken to sort graph with Lists: {totalTimeLists}");
-        Console.WriteLine($"Average time per {numOfTests} tests taken to sort graph with Lists: {averagePerOneSetOfTestsLists}");
+        Console.WriteLine($"\nTotal time per {numOfTests} taken to sort graph with Matrix: {totalTimeMatrix}ms");
+        Console.WriteLine($"Average time per {numOfTests} tests taken to sort graph with Matrix: {averagePerOneSetOfTestsMatrix}ms\n");
+        Console.WriteLine($"Total time per {numOfTests} taken to sort graph with Lists: {totalTimeLists}ms");
+        Console.WriteLine($"Average time per {numOfTests} tests taken to sort graph with Lists: {averagePerOneSetOfTestsLists}ms");
         /*printers.ToPrintMatrix(adjacencyMatrix, numVertices);
         printers.ToPrintStack(sorted);
         printers.ToPrintLists(adjacencyMatrix, numVertices);*/
