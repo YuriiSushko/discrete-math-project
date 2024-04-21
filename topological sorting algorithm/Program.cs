@@ -19,7 +19,7 @@ static class Program
         var sortedGraphWithMatrix = new Stack<int>();
 
         var adjacencyLists = new List<List<int>>();
-        var sortedGraphWithLists = dfsLists.TopologicalSort(adjacencyLists, numVertices);
+        var sortedGraphWithLists = new Stack<int>();
         
         var totalTimeMatrix = 0L;
         var totalTimeLists = 0L;
@@ -31,7 +31,7 @@ static class Program
 
             var sw1 = new Stopwatch();
             sw1.Start();
-            Console.WriteLine($"Test #{i+1}: \n");
+            Console.WriteLine($"\nTest #{i+1}: ");
             
             sortedGraphWithMatrix = dfsMatrix.TopologicalSort(adjacencyMatrix);
             
