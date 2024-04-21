@@ -7,7 +7,7 @@ static class Program
     static void Main()
     {
         var obj = new TopologyDFS();
-        var dfs = new DfsTopologicalSortingAlgorithm();
+        var dfsMatrix = new DfsTopologicalSortingAlgorithm();
         var printers = new Printers();
         
         const int numVertices = 15;
@@ -26,7 +26,7 @@ static class Program
             sw.Start();
             Console.WriteLine($"Test #{i+1}: \n");
             
-            sortedGraphWithMatrix = dfs.TopologicalSort(adjacencyMatrix);
+            sortedGraphWithMatrix = dfsMatrix.TopologicalSort(adjacencyMatrix);
             
             sw.Stop();
             Console.WriteLine($"Time taken to sort via matrices: {sw.Elapsed}");
