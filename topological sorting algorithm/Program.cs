@@ -57,8 +57,8 @@ static class Program
         Console.WriteLine($"Average time per {numOfTests} tests taken to sort graph with Matrix: {averagePerOneSetOfTestsMatrix}ms\n");
         Console.WriteLine($"Total time per {numOfTests} taken to sort graph with Lists: {totalTimeLists}ms");
         Console.WriteLine($"Average time per {numOfTests} tests taken to sort graph with Lists: {averagePerOneSetOfTestsLists}ms");
-        /*printers.ToPrintMatrix(adjacencyMatrix, numVertices);
-        printers.ToPrintStack(sorted);
-        printers.ToPrintLists(adjacencyMatrix, numVertices);*/
+        printers.ToPrintMatrix(adjacencyMatrix, numVertices);
+        printers.ToPrintStack(sortedGraphWithLists);
+        printers.ToPrintLists(adjacencyMatrix, numVertices);
     }
 }
