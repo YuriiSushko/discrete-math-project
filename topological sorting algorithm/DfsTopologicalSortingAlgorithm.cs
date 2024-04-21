@@ -1,6 +1,6 @@
 ﻿namespace topological_sorting_algorithm;
 
-public class DfsViaAdjacencyMatrix
+public class DfsTopologicalSortingAlgorithm
 {
     private void DfsFunction(Vertex vertex, Vertex[,] adjacencyMatrix, bool[] visitedArray, Stack<int> stack)
     {
