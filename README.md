@@ -42,7 +42,7 @@ The performance of the two sorting methods is evaluated based on the execution t
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/YuriiSushko/discrete-math-project/blob/38a024252823dfed2aba12f95c4691e95dba4649/LICENSE) file for details.
 
 ## Contributors
 
